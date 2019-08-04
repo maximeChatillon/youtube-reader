@@ -1,0 +1,17 @@
+<div class="container">
+  <section class="card-img-top ">
+    <youtube-player *ngIf="videoId != null"
+      [videoId]="videoId"
+      (ready)="savePlayer($event)"
+      (change)="onStateChange($event)"
+      [playerVars]="playerVars"
+      [width]="720"
+      [height]="480">
+    </youtube-player>
+
+    <div  *ngIf="videoId == null"
+      style="height: 480px; width=720px; background-color: grey;">
+    </div>
+
+  </section>
+</div>

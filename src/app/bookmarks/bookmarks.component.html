@@ -1,0 +1,18 @@
+<div>
+  <h4>Number of entries in the current bookmarks : {{ getBookmarks().length }}</h4>
+  <button (click)=addBookmark(bookmarkId)
+          class="btn btn-primary">
+    Add the current video to the bookmarks
+  </button>
+  <button (click)=changeViewBookMark()
+          class="btn btn-primary">
+    See/Unsee bookmark list
+  </button>
+  <div *ngIf="seeBookmarks === true">
+    <ul>
+      <li *ngFor="let bookmark of bookmarks">
+        <a href="javascript:void(0)" (click)="setId(bookmark)"> {{bookmark}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

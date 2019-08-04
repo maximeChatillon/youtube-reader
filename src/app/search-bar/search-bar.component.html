@@ -1,0 +1,10 @@
+<div class="form-group">
+  <label for="url">Enter the video URL :</label><br>
+  <input #newurl
+    (keyup.enter)="onWatchVideo(newurl.value)"
+    (blur)="onWatchVideo(newurl.value); newurl.value=''">
+    <br>
+<button (click)="onWatchVideo(newurl.value)" class="btn btn-primary">
+  Watch video
+</button>
+</div>

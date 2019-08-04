@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="jumbotron">
+    <h1>
+      Welcome to my {{ title }}
+    </h1>
+  </div>
+</div>
+
+<div id="wrapper" class="toggled">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <History [historyId]="id"
+        (idChange) = setId($event)>
+      </History >
+      </div> <!-- /#sidebar-wrapper -->
+</div>
+<div>
+  <videoView [videoId]='id'>
+  </videoView >
+</div>
+
+<div align="center">
+
+     <searchBar (idChange) = setId($event)>
+     </searchBar >
+
+
+  <Bookmarks [bookmarkId] = 'id'
+    (idChange) = setId($event)>
+</Bookmarks>
+</div>
+
+<router-outlet></router-outlet>

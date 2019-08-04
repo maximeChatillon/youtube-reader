@@ -1,0 +1,8 @@
+<div>
+<h4>History :</h4>
+  <ul class="sidebar-nav">
+    <li *ngFor="let history of histories">
+      <a href="javascript:void(0)" (click)="setId(history)"> {{history}}</a>
+    </li>
+  </ul>
+</div>
